@@ -1,0 +1,13 @@
+{
+  "name": "after_prepare",
+  "version": "1.0.0",
+  "author": "Ludei Team <devs@ludei.com>",
+  "description": "Hook for adding user splashes",
+  "dependencies": {
+    "canvas": "1.6.7",
+    "image-size": "0.3.5"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

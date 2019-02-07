@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.ludei.splash.android"
+    version="2.0.1">
+
+    <name>Cocoon Splash Plugin</name>
+    <description>Cocoon Splash Plugin</description>
+    <license>Copyright Ludei</license>
+    <keywords>cordova, ludei, cocoon, development, devapp</keywords>
+    <repo>https://bitbucket.org/ludei/cocoon_plugins</repo>
+
+    <engines>
+      <engine name="cordova-android" version=">=7" />
+      <engine name="cordova-plugman" version=">=4.2.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <hook type="after_install" src="scripts/after_install.js" />
+
+        <source-file src="src/android/SplashPlugin.java" target-dir="src/com/ludei/splash/android" />
+
+        <config-file target="app/src/main/res/xml/config.xml" parent="/*">
+            <feature name="SplashPlugin">
+                <param name="android-package" value="com.ludei.splash.android.SplashPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/android/splash_plugin.jar" />
+
+    </platform>
+</plugin>

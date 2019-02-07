@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/imanolmartin/Development/Projects/CocoonJS/cocoon_plugins/UserSplashPluginAndroid/CordovaLib/assets"/></dataSet><dataSet config="release"><source path="/Users/imanolmartin/Development/Projects/CocoonJS/cocoon_plugins/UserSplashPluginAndroid/CordovaLib/src/release/assets"/></dataSet></merger>

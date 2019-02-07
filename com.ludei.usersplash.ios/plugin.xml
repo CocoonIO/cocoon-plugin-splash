@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.ludei.usersplash.ios"
+    version="1.0.5">
+
+    <name>User Splash Plugin</name>
+
+    <description>
+        Cocoon Splash plugin allows the user to set a splash. It can be customized with different preferences:
+
+            - CocoonSplashScaleMode: scaleAspectFit, scaleAspectFill, scaleToFill
+            - CocoonSplashBackgroundColor: Hex color to fill the background with
+            - CocoonSplashPadding: A padding around the image in "pt"
+            - CocoonSplashDelay: A delay while the splash will be shown before the app shows
+    </description>
+
+    <license>Copyright Ludei</license>
+
+    <engines>
+        <!-- Requires > 3.3.* because of the custom Framework tag for iOS [CB-5238] -->
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+
+    <platform name="ios">
+        <hook type="after_prepare" src="scripts/after_prepare.js" />
+        <!-- <hook type="before_prepare" src="scripts/before_prepare.js" /> -->
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="UserSplashPlugin">
+                <param name="ios-package" value="UserSplashPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/UserSplashPlugin.h" />
+        <source-file src="src/ios/UserSplashPlugin.m" />
+
+        <resource-file src="res/ios/cocoonSplashImage.png" />
+    </platform>
+</plugin>

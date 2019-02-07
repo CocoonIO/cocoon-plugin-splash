@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.ludei.splash.ios" version="1.1.0">
+    <name>Cocoon Splash Plugin</name>
+    <description>Cocoon Splash Plugin</description>
+    <license>MPL 2.0</license>
+    <keywords>Developer,App,Launcher,canvasplus,CocoonJS</keywords>
+    <platform name="ios">
+        <hook type="after_prepare" src="scripts/after_prepare.js" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="SplashPlugin">
+                <param name="ios-package" value="SplashPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CocoonSplash.h" />
+        <header-file src="src/ios/SplashPlugin.h" />
+        <source-file src="src/ios/SplashPlugin.m" />
+
+    </platform>
+
+</plugin>
